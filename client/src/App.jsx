@@ -5,7 +5,7 @@ import Login from "./pages/login";
 import Register from "./pages/Register";
 import axios from "axios";
 
-axios.defaults.baseURL='http://localhost:4000';
+axios.defaults.baseURL='http://localhost:5000';
 
 function App() {
   return (
