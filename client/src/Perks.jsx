@@ -1,8 +1,17 @@
 export default function Perks({selected,onChange}) {
+  function handleCbClick(ev){
+    const {checked,name}=ev.target;
+    if(checked){
+      onChange([...selected,name]);
+    }
+    else {
+      onChange([...selected.filter(selectedName=>selectedName!=name)])
+    }
+  }
   return (
     <div className=" mt-2 grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
       <label className="border p-4 flex rouded-2xl gap-2 items-center cursor-pointer">
-        <input type="checkbox" />
+        <input type="checkbox" checked={selected.includes("wifi")} name="wifi" onChange={handleCbClick}/>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -20,7 +29,7 @@ export default function Perks({selected,onChange}) {
         <span>wifi</span>
       </label>
       <label className="border p-4 flex rouded-2xl gap-2 items-center cursor-pointer">
-        <input type="checkbox" />
+        <input type="checkbox" checked={selected.includes("Tv")} name="Tv" onChange={handleCbClick}/>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -39,7 +48,7 @@ export default function Perks({selected,onChange}) {
         <span>Tv</span>
       </label>
       <label className="border p-4 flex rouded-2xl gap-2 items-center cursor-pointer">
-        <input type="checkbox" />
+        <input type="checkbox"  checked={selected.includes("pets")} name="pets" onChange={handleCbClick}/>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -52,7 +61,7 @@ export default function Perks({selected,onChange}) {
         <span>pets</span>
       </label>
       <label className="border p-4 flex rouded-2xl gap-2 items-center cursor-pointer">
-        <input type="checkbox" />{" "}
+        <input type="checkbox" checked={selected.includes("Free parking spot")} name="Free parking spot" onChange={handleCbClick}/>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -65,7 +74,7 @@ export default function Perks({selected,onChange}) {
         <span>Free parking spot</span>
       </label>
       <label className="border p-4 flex rouded-2xl gap-2 items-center cursor-pointer">
-        <input type="checkbox" />
+        <input type="checkbox"  checked={selected.includes("Private entrance")} name="Private entrance" onChange={handleCbClick}/>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
