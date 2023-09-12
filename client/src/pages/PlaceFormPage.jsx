@@ -56,7 +56,7 @@ export default function PlaceFormPage(){
         title,address,addedPhotos,
         description,perks,extraInfo,
         checkIn,checkOut,maxGuests,price
-      }
+      };
       if(id){
         await axios.put("/places",{
           id,...placeData
