@@ -4,16 +4,17 @@
 
 input[type="text"],
 input[type="email"],
-input[type="password"] ,
-input[type="number"]
-input[type="textarea"]{
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea{
   @apply w-full border my-2 py-1 px-2 rounded-xl;
 }
-textarea{
-  height:140px;
+textarea {
+  height: 140px;
 }
 button {
-  @apply bg-gray-300 
+  @apply bg-gray-300;
 }
 button.primary {
   @apply w-full bg-primary p-2 text-xl text-white rounded-xl;
