@@ -12,10 +12,10 @@ export default function IndexPage() {
   return (
     <div className="mt-8 grid gap-x-6 gap-y-8 grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       {places.length > 0 && places.map(place => (
-        <Link to={'/place/'+place._id} key={place} >
-          <div className="bg-gray-500 mb-2 rounded-2xl flex flex-col" >
+        <Link to={'/place/'+place._id} key={place._id} >
+          <div className="bg-gray-500 mb-2  rounded-2xl flex flex-col" >
             {place.photos?.[0] && (
-              <img className="rounded-2xl aspect-square object-cover" src={"http://localhost:5000/uploads/"+place.photos?.[0]} alt=""/>
+              <img className="rounded-2xl h-80  spect-square object-cover" src={"http://localhost:5000/uploads/"+place.photos?.[0]} alt=""/>
             )}
           </div>
           <h2 className="font-bold">{place.address}</h2>
