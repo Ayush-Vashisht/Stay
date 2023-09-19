@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Ayush-Vashisht/Stay/issues"
   },
-  "homepage": "https://github.com/Ayush-Vashisht/Stay#readme"
+  "homepage": "https://github.com/Ayush-Vashisht/Stay#readme",
+  "dependencies": {
+    "firebase": "^10.4.0"
+  }
 }

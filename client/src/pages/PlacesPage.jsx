@@ -44,7 +44,7 @@ export default function PlacePage() {
             <div key={place}>
               <Link to ={"/account/places/"+place._id} className=" flex gap-4 mt-4 bg-gray-100 -mx-8 px-8 pt-8 ">
                 
-                <div className="bg-gray-300 h-20 w-32 grow-0 mb-4 shrink-0 rounded-xl">
+                <div className="bg-gray-300 h-14 w-32 grow mb-4 shrink-0 rounded-xl">
                   <PLaceImg place={place} />
                 </div>
                 <div className="grow-0 shrink">
